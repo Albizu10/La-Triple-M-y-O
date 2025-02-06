@@ -1,0 +1,48 @@
+body {
+    margin: 0%;
+}
+
+#logo {
+    margin: 10px;
+    text-align: center;
+}
+ nav {
+    width: 100%;
+    overflow: hidden;
+    text-decoration: none;
+    float: left;
+    height: 50px;
+    display: block;
+ }
+
+ nav a{
+    text-decoration: none;
+    color: black;
+ }
+
+ #carritoLink{
+    float: right;
+ }
+
+#carritoLink img{
+    height: 20px;
+    width: 20px;
+}
+ 
+ #contenido_desplegable{
+    display: none;
+    
+ }
+
+ nav a, nav b{
+    padding: 20px 15px;
+    font-size: 20px;
+    vertical-align: middle;
+ }
+ 
+ 
+
+ .Logo-Footer{
+   width: 30px;
+   height: auto;
+ }
