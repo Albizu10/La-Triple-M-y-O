@@ -1,0 +1,1 @@
+nombre,desc,precio,stock,categoria,img
