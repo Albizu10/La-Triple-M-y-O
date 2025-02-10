@@ -1,0 +1,68 @@
+#logo {
+   margin: 10px;
+   text-align: center;
+}
+
+.fotocarro {
+   float: right;
+}
+
+#carritoLink img {
+   height: 20px;
+}
+
+nav ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+}
+
+nav li {
+   float: left;
+   background-color: white;
+}
+
+nav li a,
+.desplegableNom {
+   display: inline-block;
+   color: black;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+}
+
+nav li a:hover ,
+.desplegable:hover .desplegableNom {
+   background-color: gray;
+}
+
+nav li.desplegable {
+   display: inline-block;
+}
+
+.contDesplegable {
+   display: none;
+   position: absolute;
+   background-color: gray;
+   min-width: 160px;
+   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+   z-index: 1;
+}
+
+.contDesplegable a {
+   color: black;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+   text-align: left;
+}
+
+.contDesplegable a:hover {
+   background-color: #26278b;
+   color: white;
+}
+
+.desplegable:hover .contDesplegable {
+   display: block;
+}

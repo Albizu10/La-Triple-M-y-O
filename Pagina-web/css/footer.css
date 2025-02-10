@@ -1,0 +1,56 @@
+.Logo-Footer {
+   width: 20px;
+   height: auto;
+   float: left;
+}
+
+.Creative-Commons {
+   width: 90px;
+   height: auto;
+}
+
+.footer {
+   background-color: rgb(38, 38, 38);
+   color: white;
+   text-align: justify;
+}
+
+.footer-menu>li>a {
+   color: white;
+   text-decoration: none;
+}
+
+.footer-info {
+   list-style-type: none;
+}
+
+.footer-info>li>a {
+   color: white;
+   text-decoration: none;
+   padding: 0px 10px;
+}
+
+.footer-legal-enlaces>p>a {
+   color: white;
+   text-decoration: none;
+   padding: 0px 10px;
+   vertical-align: middle;
+}
+
+@media (max-width: 600px) {
+   .footer-legal-enlaces {
+      text-align: center;
+   }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+   .footer-legal-enlaces {
+      text-align: left;
+   }
+}
+
+@media (min-width: 1201px) {
+   .footer-legal-enlaces {
+      text-align: left;
+   }
+}

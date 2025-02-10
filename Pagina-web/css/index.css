@@ -1,0 +1,45 @@
+body {
+   margin: 0%;
+   background-color: lightgrey;
+}
+
+.producto {
+
+   border: 1px solid black;
+   border-radius: 10px;
+   width: 300px;
+   text-align: center;
+}
+
+.producto img {
+   width: 75%;
+   height: auto;
+   border-radius: 10px 10px 0px 0px;
+}
+
+#producto-container {
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: auto;
+   width: 100%;
+}
+
+@media (max-width: 600px) and (min-width: 0px) {
+   .img-producto {
+      width: 20%;
+   }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+   .img-producto {
+      width: 25%;
+   }
+}
+
+@media (min-width: 1201px) {
+   .img-producto {
+      width: 30%;
+   }
+}
