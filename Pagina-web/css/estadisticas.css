@@ -1,0 +1,32 @@
+body {
+    margin: 0%;
+    background-color: #f5f5dc;
+}
+
+main>section>h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: auto;
+    width: 100%;
+}
+
+.producto {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.653);
+}
+
+.producto img {
+    width: 75%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
