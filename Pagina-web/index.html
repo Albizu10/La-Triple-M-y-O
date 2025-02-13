@@ -9,35 +9,32 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/index.css">
     <script src="index.js" defer></script>
-
+    <script src="carrito.js" defer></script>
 </head>
 
 <body>
     <header>
-        <a href="#"><img src="fotos/logo.png" alt="logo" id="logo"></a>
+        <a href="index.html"><img src="fotos/logo.png" alt="logo" id="logo"></a>
         <nav>
             <ul>
-                <li class="desplegable">
-                    <a href="javascript:void(0)" class="desplegableNom">Categorias</a>
-                    <div class="contDesplegable">
-                        <a href="#">Camisetas</a>
-                        <a href="#">Pantalones</a>
-                        <a href="#">Sudaderas</a>
-                        <a href="#">Camisas</a>
-                        <a href="#">Chaquetas</a>
-                    </div>
-                </li>
-                <li><a href="#">Estadisticas</a></li>
-                <li class="fotocarro"><a id="carritoLink" href="" style="background-color: white;"><img src="fotos/carrito.png" alt="carrito"></a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li class="desplegable"><a href="productos.html" class="desplegableNom"
+                        onclick="verProductos()">Productos</a></li>
+                <li><a href="estadisticas.html">Estadisticas</a></li>
+                <li class="fotocarro"><a id="carritoLink" href="carrito.html" style="background-color: white;"><img
+                            src="fotos/carrito.png" alt="carrito"></a></li>
             </ul>
         </nav>
     </header>
     <main>
+        <h1>
+            <center>PRODUCTOS MAS VENDIDOS</center>
+        </h1>
         <div id="producto-container"></div>
     </main>
     <footer>
         <div class="footer">
-            <h3>Contacto:</h3>
+            <h3 id="contacto">Contacto:</h3>
             <ul class="footer-info">
                 <li><a href="https://instagram.com" target="_blank">Instagram<img class="Logo-Footer"
                             src="fotos/logoInstagram.png"></a></li><br>
@@ -60,7 +57,7 @@
     </footer>
 
     <script>
-        
+
     </script>
 </body>
 

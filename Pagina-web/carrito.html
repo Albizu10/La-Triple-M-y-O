@@ -4,40 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Carrito</title>
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/carrito.css">
-
+    <script src="carrito.js" defer></script>
+    <script src="productos.js" defer></script>
 </head>
 
 <body>
     <header>
-        <a href="#"><img src="fotos/logo.png" alt="logo" id="logo"></a>
+        <a href="index.html"><img src="fotos/logo.png" alt="logo" id="logo"></a>
         <nav>
             <ul>
+                <li><a href="index.html">Inicio</a></li>
                 <li class="desplegable">
-                    <a href="javascript:void(0)" class="desplegableNom">Categorias</a>
-                    <div class="contDesplegable">
-                        <a href="#">Camisetas</a>
-                        <a href="#">Pantalones</a>
-                        <a href="#">Sudaderas</a>
-                        <a href="#">Camisas</a>
-                        <a href="#">Chaquetas</a>
-                    </div>
+                    <a href="productos.html" class="desplegableNom">Productos</a>
                 </li>
-                <li><a href="#">Estadisticas</a></li>
-
-                <li class="fotocarro"><a id="carritoLink" href="" style="background-color: white;"><img src="fotos/carrito.png" alt="carrito"></a></li>
+                <li><a href="estadisticas.html">Estadisticas</a></li>
+                <li class="fotocarro"><a id="carritoLink" href="carrito.html" style="background-color: white;"><img
+                            src="fotos/carrito.png" alt="carrito"></a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <br><br><br><br><br><br><br>
+        <div id="Contenido-carrito">
+            <h1>Carrito</h1>
+            <div id="carrito-container"></div>
+            <div id="total-container">
+                <h2>Total: <span id="total">0</span>€</h2>
+            </div>
+        </div>
+        <div class="botones">
+            <p><button class="boton-reset" id="reset" onclick="vaciarCarrito()">VACIAR CARRITO</button>
+                <button id="comprar" onclick="GraciasCompra()">COMPRAR</button>
+                <button id="seguircompra"><a href="index.html">SEGUIR COMPRANDO</a></button>
+            </p>
+        </div>
     </main>
     <footer>
         <div class="footer">
-            <h3>Contacto:</h3>
+            <h3 id="contacto">Contacto:</h3>
             <ul class="footer-info">
                 <li><a href="https://instagram.com" target="_blank">Instagram<img class="Logo-Footer"
                             src="fotos/logoInstagram.png"></a></li><br>

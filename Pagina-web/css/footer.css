@@ -7,12 +7,14 @@
 .Creative-Commons {
    width: 90px;
    height: auto;
+   padding-bottom: 5px;
 }
 
 .footer {
    background-color: rgb(38, 38, 38);
    color: white;
    text-align: justify;
+   content: 100%;
 }
 
 .footer-menu>li>a {
@@ -35,6 +37,11 @@
    text-decoration: none;
    padding: 0px 10px;
    vertical-align: middle;
+}
+
+#contacto {
+   padding-top: 20px;
+   margin-left: 40px;
 }
 
 @media (max-width: 600px) {
