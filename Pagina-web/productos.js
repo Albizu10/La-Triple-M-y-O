@@ -1,52 +1,37 @@
 //Listado de TODOS los productos
-fetch('https://fakestoreapi.com/products')
-    .then(res => res.json())
-    .then(json => {
-        const container = document.getElementById('producto-container');
-        container.innerHTML = '';
-        json.forEach(product => {
-            const div = document.createElement('div');
-            div.innerHTML = `
-                <div class="producto">
-                    <img class="img-producto" src="${product.image}" alt="${product.title}" style="height:300px;margin-top:20px;" onclick="verProducto(${product.id})">
-                    <h2 style="height:55px; overflow:hidden;">${product.title}</h2>
-                    <p><b>${product.price}€</b></p>
-                </div>
-                <br>
-            `;
-            container.appendChild(div);
-        });
-    })
-    .catch(error => console.error('Error al cargar los productos:', error));
-
-//Listado de todos los productos despues de hacer click en el boton de productos
-function verProductos() {
-    fetch('https://fakestoreapi.com/products')
+document.addEventListener('DOMContentLoaded', () => {
+    fetch('productos.json')
         .then(res => res.json())
         .then(json => {
-            const container = document.getElementById('producto-container');
-            container.innerHTML = '';
-            json.forEach(product => {
-                const div = document.createElement('div');
-                div.innerHTML = `
-                <div class="producto">
-                    <img class="img-producto" src="${product.image}" alt="${product.title}" style="height:300px;margin-top:20px;" onclick="verProducto(${product.id})">
-                    <h2 style="height:55px; overflow:hidden;">${product.title}</h2>
-                    <p><b>${product.price}€</b></p>
-                </div>
-                <br>
-            `;
-                container.appendChild(div);
-            });
+            verProductos(json.products);
         })
-        .catch(error => console.error('Error al cargar los productos:', error));
+        .catch(error => console.error('Error al cargar los datos:', error));
+});
+
+//Listado de todos los productos despues de hacer click en el boton de productos
+function verProductos(products) {
+    const container = document.getElementById('producto-container');
+    container.innerHTML = '';
+    products.forEach(product => {
+        const div = document.createElement('div');
+        div.innerHTML = `
+            <div class="producto">
+                <img class="img-producto" src="${product.image}" alt="${product.title}" style="height:300px;margin-top:20px;" onclick="verProducto(${product.id})">
+                <h2 style="height:55px; overflow:hidden;">${product.title}</h2>
+                <p><b>${product.price}€</b></p>
+            </div>
+            <br>
+        `;
+        container.appendChild(div);
+    });
 }
 
 //Ver un producto en especifico
 function verProducto(productId) {
-    fetch(`https://fakestoreapi.com/products/${productId}`)
+    fetch('productos.json')
         .then(res => res.json())
-        .then(product => {
+        .then(json => {
+            const product = json.products.find(p => p.id == productId);
             const container = document.getElementById('producto-container');
             container.innerHTML = '';
             const div = document.createElement('div');
@@ -67,21 +52,22 @@ function verProducto(productId) {
 
 //Ver todos los productos de una categoria
 function verCategoria(category) {
-    fetch(`https://fakestoreapi.com/products/category/${category}`)
+    fetch('productos.json')
         .then(res => res.json())
-        .then(products => {
+        .then(json => {
+            const products = json.products.filter(p => p.category == category);
             const container = document.getElementById('producto-container');
             container.innerHTML = '';
             products.forEach(product => {
                 const div = document.createElement('div');
                 div.innerHTML = `
-                <div class="producto">
-                    <img class="img-producto" src="${product.image}" alt="${product.title}" style="height:300px;margin-top:20px;" onclick="verProducto(${product.id})">
-                    <h2 style="height:55px; overflow:hidden;">${product.title}</h2>
-                    <p><b>${product.price}€</b></p>
-                </div>
-                <br>
-            `;
+                    <div class="producto">
+                        <img class="img-producto" src="${product.image}" alt="${product.title}" style="height:300px;margin-top:20px;" onclick="verProducto(${product.id})">
+                        <h2 style="height:55px; overflow:hidden;">${product.title}</h2>
+                        <p><b>${product.price}€</b></p>
+                    </div>
+                    <br>
+                `;
                 container.appendChild(div);
             });
         })

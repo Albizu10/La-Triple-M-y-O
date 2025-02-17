@@ -29,20 +29,69 @@
     </header>
     <main>
         <section>
-            <h2>Productos más vendidos</h2>
-            <div id="mas-vendidos" class="productos-container"></div>
+            <h2>Productos con Bajo Stock</h2>
+            <div class="slider-container">
+                <div class="slider" id="slider-stockBajo">
+                    <!-- Slides will be inserted here by JavaScript -->
+                </div>
+                <div class="slider-indicators" id="slider-indicators-stockBajo">
+                    <!-- Indicators will be inserted here by JavaScript -->
+                </div>
+                <button class="prev" onclick="moveSlide('stockBajo', -1)">&#10094;</button>
+                <button class="next" onclick="moveSlide('stockBajo', 1)">&#10095;</button>
+            </div>
         </section>
         <section>
-            <h2>Mejores calificados</h2>
-            <div id="mejores-calificados" class="productos-container"></div>
+            <h2>Usuarios con Más Pedidos</h2>
+            <div class="slider-container">
+                <div class="slider" id="slider-usuariosConMasPedidos">
+                    <!-- Slides will be inserted here by JavaScript -->
+                </div>
+                <div class="slider-indicators" id="slider-indicators-usuariosConMasPedidos">
+                    <!-- Indicators will be inserted here by JavaScript -->
+                </div>
+                <button class="prev" onclick="moveSlide('usuariosConMasPedidos', -1)">&#10094;</button>
+                <button class="next" onclick="moveSlide('usuariosConMasPedidos', 1)">&#10095;</button>
+            </div>
         </section>
         <section>
-            <h2>Productos más caros</h2>
-            <div id="mas-caros" class="productos-container"></div>
+            <h2>Ganancias por Mes</h2>
+            <div class="slider-container">
+                <div class="slider" id="slider-GananciasPorMes">
+                    <!-- Slides will be inserted here by JavaScript -->
+                </div>
+                <div class="slider-indicators" id="slider-indicators-GananciasPorMes">
+                    <!-- Indicators will be inserted here by JavaScript -->
+                </div>
+                <button class="prev" onclick="moveSlide('GananciasPorMes', -1)">&#10094;</button>
+                <button class="next" onclick="moveSlide('GananciasPorMes', 1)">&#10095;</button>
+            </div>
         </section>
         <section>
-            <h2>Productos más baratos</h2>
-            <div id="mas-baratos" class="productos-container"></div>
+            <h2>Productos Nunca Comprados</h2>
+            <div class="slider-container">
+                <div class="slider" id="slider-productosNuncaCompr">
+                    <!-- Slides will be inserted here by JavaScript -->
+                </div>
+                <div class="slider-indicators" id="slider-indicators-productosNuncaCompr">
+                    <!-- Indicators will be inserted here by JavaScript -->
+                </div>
+                <button class="prev" onclick="moveSlide('productosNuncaCompr', -1)">&#10094;</button>
+                <button class="next" onclick="moveSlide('productosNuncaCompr', 1)">&#10095;</button>
+            </div>
+        </section>
+        <section>
+            <h2>Ganancias más de Quinientos</h2>
+            <div class="slider-container">
+                <div class="slider" id="slider-gananciasMasDeQuinientos">
+                    <!-- Slides will be inserted here by JavaScript -->
+                </div>
+                <div class="slider-indicators" id="slider-indicators-gananciasMasDeQuinientos">
+                    <!-- Indicators will be inserted here by JavaScript -->
+                </div>
+                <button class="prev" onclick="moveSlide('gananciasMasDeQuinientos', -1)">&#10094;</button>
+                <button class="next" onclick="moveSlide('gananciasMasDeQuinientos', 1)">&#10095;</button>
+            </div>
         </section>
     </main>
     <footer>
@@ -66,7 +115,6 @@
                 </p>
             </div>
         </div>
-
     </footer>
 </body>
 

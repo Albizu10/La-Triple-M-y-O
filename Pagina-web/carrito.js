@@ -1,10 +1,11 @@
 //Vaciar carrito
 function vaciarCarrito() {
-    localStorage.removeItem('carrito');
-    localStorage.removeItem('total');
-    alert('Carrito vaciado');
-    verCarrito();
-    document.getElementById('total').innerText = '0.00';
+    if (confirm('¿Desea vaciar el carrito?')){
+        localStorage.removeItem('carrito');
+        localStorage.removeItem('total');
+        document.getElementById('total').innerText = '0';
+        verCarrito();
+    };
 }
 
 //Ver carrito
@@ -13,30 +14,32 @@ function verCarrito() {
     const container = document.getElementById('carrito-container');
     container.innerHTML = '';
     let total = 0;
-
-    carrito.forEach(item => {
-        fetch(`https://fakestoreapi.com/products/${item.id}`)
-            .then(response => response.json())
-            .then(product => {
-                const div = document.createElement('div');
-                div.innerHTML = `
-                    <div class="producto">
-                        <img class="img-producto" src="${product.image}" alt="${product.title}" style="height:300px;margin-top:20px;">
-                        <h2 style="height:55px; overflow:hidden;">${product.title}</h2>
-                        <p><b>${product.price}€</b></p>
-                        <p>Cantidad</p>
-                        <button onclick="cambiarCantidad(${item.id}, -1)">-</button>
-                        ${item.cantidad}
-                        <button onclick="cambiarCantidad(${item.id}, 1)">+</button>
-                    </div>
-                    <br>
-                `;
-                container.appendChild(div);
-                total += product.price * item.cantidad;
-                document.getElementById('total').innerText = total.toFixed(2);
-            })
-            .catch(error => console.error('Error al cargar los productos:', error));
-    });
+    fetch('productos.json')
+        .then(res => res.json())
+        .then(json => {
+            carrito.forEach(item => {
+                const product = json.products.find(p => p.id == item.id);
+                if (product) {
+                    const div = document.createElement('div');
+                    div.innerHTML = `
+                        <div class="producto">
+                            <img class="img-producto" src="${product.image}" alt="${product.title}" style="height:300px;margin-top:20px;">
+                            <h2 style="height:55px; overflow:hidden;">${product.title}</h2>
+                            <p><b>${product.price}€</b></p>
+                            <p>Cantidad</p>
+                            <button onclick="cambiarCantidad(${item.id}, -1)">-</button>
+                            ${item.cantidad}
+                            <button onclick="cambiarCantidad(${item.id}, 1)">+</button>
+                        </div>
+                        <br>
+                    `;
+                    container.appendChild(div);
+                    total += product.price * item.cantidad;
+                    document.getElementById('total').innerText = total.toFixed(2);
+                }
+            });
+        })
+        .catch(error => console.error('Error al cargar los productos:', error));
 }
 
 //Cambiar cantidad de producto en el carrito

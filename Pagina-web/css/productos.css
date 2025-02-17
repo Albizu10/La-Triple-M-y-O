@@ -1,11 +1,13 @@
 body {
    margin: 0%;
-   background-color: #f5f5dc;
+   background-color: rgb(220, 244, 245);
 }
 
 main > h1{
    text-align: center;
    margin-top: 20px;
+   animation-name: fadeIn;
+   animation-duration: 1s;
 }
 
 .producto {
@@ -16,7 +18,9 @@ main > h1{
    text-align: center;
    align-items: center;
    justify-content: space-between;
+   margin: 10px;
 }
+
 
 .producto img {
    width: 75%;
@@ -31,6 +35,12 @@ main > h1{
    justify-content: space-around;
    align-items: auto;
    width: 100%;
+   cursor: pointer;
+}
+
+.producto > h2 {
+   font-size: 20px;
+   margin: 0px;
 }
 
 .producto > button > a{
@@ -62,5 +72,14 @@ main > h1{
 @media (min-width: 1201px) {
    .img-producto {
       width: 30%;
+   }
+}
+
+@keyframes fadeIn {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
    }
 }

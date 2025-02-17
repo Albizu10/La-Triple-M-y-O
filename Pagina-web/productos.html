@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Productos</title>
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/productos.css">
     <script src="productos.js" defer></script>
     <script src="carrito.js" defer></script>
-</head> 
+</head>
 
 <body>
     <header>
@@ -19,16 +19,18 @@
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li class="desplegable">
-                    <a href="javascript:void(0)" class="desplegableNom" onclick="verProductos()">Productos</a>
+                    <a href="productos.html" class="desplegableNom" onclick="verProductos()">Productos</a>
                     <div class="contDesplegable">
-                        <a onclick="verCategoria('men\'s clothing')">Ropa de hombre</a>
-                        <a onclick="verCategoria('women\'s clothing')">Ropa de mujer</a>
-                        <a onclick="verCategoria('jewelery')">Joyas</a>
-                        <a onclick="verCategoria('electronics')">Electronica</a>
+                        <a onclick="verCategoria('1')">Pantalones</a>
+                        <a onclick="verCategoria('2')">Sudaderas</a>
+                        <a onclick="verCategoria('3')">Camisetas</a>
+                        <a onclick="verCategoria('4')">Camisas</a>
+                        <a onclick="verCategoria('5')">Chaqueta</a>
+                    </div>
                 </li>
                 <li><a href="estadisticas.html">Estadisticas</a></li>
-                <li class="fotocarro"><a id="carritoLink" href="carrito.html"><img src="fotos/carrito.png"
-                            alt="carrito"></a></li>
+                <li class="fotocarro"><a id="carritoLink" href="carrito.html" style="background-color: white;"><img
+                            src="fotos/carrito.png" alt="carrito"></a></li>
             </ul>
         </nav>
     </header>

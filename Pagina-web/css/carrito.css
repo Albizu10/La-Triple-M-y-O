@@ -1,6 +1,19 @@
 body {
     margin: 0%;
-    background-color: #f5f5dc;
+    background-color: rgb(220, 244, 245);
+}
+
+main > div > h1 {
+    text-align: center;
+    margin-top: 20px;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+}
+
+.img-producto {
+    width: 75%;
+    height: auto;
+    border-radius: 10px 10px 0px 0px;
 }
 
 #carrito-container {
@@ -26,33 +39,42 @@ a {
     color: white;
 }
 
-button{
+button {
     padding: 10px 20px;
     background-color: darkgray;
     color: white;
     border: none;
     border-radius: 5px;
     margin: 3px;
-   
-    
 }
-
 
 #comprar {
-    
     width: auto;
 }
-h1{
+
+h1 {
     text-align: center;
 }
-h2{
+
+h2 {
     text-align: center;
 }
-.botones{
+
+.botones {
     justify-content: space-between;
     padding: 10px 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
