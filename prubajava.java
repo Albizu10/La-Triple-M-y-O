@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import javs.io.*;
+
 
 public class prubajava {
 
@@ -21,6 +23,7 @@ public class prubajava {
         System.out.println("0-Salir del programa");
         System.out.println("-----------------------");
         int Opcion = sc.nextInt();
+	System.out.println("-----------------------");
 
         switch (Opcion) {
             case 1:
